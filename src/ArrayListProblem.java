@@ -1,7 +1,11 @@
 import java.util.*;
 public class ArrayListProblem {
     public static void main(String[] args) {
-
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        ArrayList<ArrayList<Integer>> list = new ArrayList<ArrayList<Integer>>();
+        ArrayList<ArrayList<Integer>> integerList = getList(list,n,sc);
+        checkList(list,sc);
     }
     public static ArrayList<ArrayList<Integer>> getList(ArrayList<ArrayList<Integer>> list,int n,Scanner sc) {
 
