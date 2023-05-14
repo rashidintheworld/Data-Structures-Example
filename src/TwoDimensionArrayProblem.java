@@ -1,8 +1,20 @@
+import java.util.Scanner;
+
 public class TwoDimensionArrayProblem {
     public static void main(String[] args) {
-
+        Scanner sc = new Scanner(System.in);
+        int myArr[][] = new int[6][6];
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 6; j++) {
+                myArr[i][j] = sc.nextInt();
+            }
+        }
+        TwoDimensionArrayProblem twoDimensionArrayProblem = new TwoDimensionArrayProblem();
+        int result = twoDimensionArrayProblem.sumHourGlass(myArr);
+        System.out.println(result);
     }
-    public int sumHourGlass(int arr[][]){
+
+    public int sumHourGlass(int arr[][]) {
         int maxSum = Integer.MIN_VALUE;
         for (int i = 0; i <= 3; i++) {
             for (int j = 0; j <= 3; j++) {
